@@ -2,6 +2,7 @@ package com.mygdx.game;
 
 
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
@@ -13,7 +14,7 @@ public class Drop extends Game {
 	public void create() {
 		batch = new SpriteBatch();
 		// Use LibGDX's default Arial font.
-		font = new BitmapFont();
+		font = new BitmapFont(Gdx.files.internal("jojo.fnt"));
 		this.setScreen(new MainMenuScreen(this));
 	}
 
